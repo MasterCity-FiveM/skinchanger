@@ -370,7 +370,7 @@ end)
 
 RegisterNetEvent('skinchanger:loadSkin')
 AddEventHandler('skinchanger:loadSkin', function(skin, cb)
-	if skin['sex'] ~= LastSex then
+	if skin['sex'] ~= nil and skin['sex'] ~= LastSex then
 		LoadSkin = skin
 
 		if skin['sex'] == 0 then
