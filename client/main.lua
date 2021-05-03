@@ -198,11 +198,13 @@ end
 
 function ApplySkin(skin, clothes)
 	local playerPed = PlayerPedId()
-
-	for k,v in pairs(skin) do
-		Character[k] = v
+	
+	if skin ~= nil then
+		for k,v in pairs(skin) do
+			Character[k] = v
+		end
 	end
-
+	
 	if clothes ~= nil then
 		for k,v in pairs(clothes) do
 			if
